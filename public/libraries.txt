@@ -1,0 +1,6 @@
+frontend/
+ libraries/
+ images/
+ scripts/
+ styles/
+ index.html
