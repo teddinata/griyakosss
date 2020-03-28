@@ -11,26 +11,27 @@ class Transaction extends Model
 
     protected $fillable = [
         'room_packages_id',  'users_id', 'transaction_total',
-        'transaction_status'
+        'transaction_status', 'room_types_id'
     ];
 
-    protected $hidden = [
+    protected $hidden = [];
 
-    ];
-
-    public function details(){
+    public function details()
+    {
         return $this->hasMany(TransactionDetail::class, 'transactions_id', 'id');
     }
 
-    public function room_package(){
+    public function room_package()
+    {
         return $this->belongsTo(RoomPackage::class, 'room_packages_id', 'id');
     }
-    public function room_types(){
-        return $this->belongsTo(RoomPackage::class, 'room_packages_id', 'id');
+    public function room_type()
+    {
+        return $this->belongsTo(RoomType::class, 'room_types_id', 'id');
     }
 
-    public function user(){
+    public function user()
+    {
         return $this->belongsTo(User::class, 'users_id', 'id', 'avatar');
     }
-
 }
