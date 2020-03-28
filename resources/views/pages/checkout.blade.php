@@ -171,9 +171,16 @@
                                         
                                     </tr>
                                     <tr>
-                                        <th width="50%">Price Room</th>
+                                        <th width="50%">Duration</th>
                                         <td width="50%" class="text-right">
-                                            Rp {{$item->room_type->price}} / Kamar
+                                        {{ $item->room_type->durasi }}
+                                        </td>
+                                        
+                                    </tr>
+                                    <tr>
+                                        <th width="50%">Check In</th>
+                                        <td width="50%" class="text-right">
+                                            {{date('d-m-Y', strtotime($item->details->first()->checkin))}}
                                         </td>
                                         
                                     </tr>
