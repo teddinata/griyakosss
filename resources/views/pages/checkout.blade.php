@@ -173,7 +173,7 @@
                                     <tr>
                                         <th width="50%">Price Room</th>
                                         <td width="50%" class="text-right">
-                                            Rp {{$item->room_package->price}} / Kamar
+                                            Rp {{$item->room_type->price}} / Kamar
                                         </td>
                                         
                                     </tr>
