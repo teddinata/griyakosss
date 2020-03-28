@@ -180,7 +180,7 @@
                                     <tr>
                                         <th width="50%">Check In</th>
                                         <td width="50%" class="text-right">
-                                            {{date('d-m-Y', strtotime($item->details->first()->checkin))}}
+                                            {{$item->details->first() ? date('d-m-Y', strtotime($item->details->first()->checkin)) : '0'}}
                                         </td>
                                         
                                     </tr>
